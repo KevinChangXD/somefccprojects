@@ -221,3 +221,37 @@ const falsyBouncer = (arr) => {
 }
 console.log(falsyBouncer([false, null, 0, NaN, undefined, ""]))
 */
+
+// seek and destroy
+/*
+const seekAndDestroy = (arr, ...rest) => {
+    for(let key of rest){
+        arr = arr.filter((a) => {
+            return a !== key
+        })
+    }
+    return arr
+}
+console.log(seekAndDestroy(["tree", "hamburger", 53], "tree", 53))
+*/
+
+//where do i belong
+/*
+const whereDoIBelong = (arr,i) => {
+    arr.push(i);
+    return (arr.sort()).indexOf(i)
+}
+console.log(whereDoIBelong([1,3,5,3.5,4],1))
+*/
+
+//caesars cipher 🔨
+/*
+const caesarsCipher = (str) => {
+    const codeArr = []
+    for(let i = 0; i < str.length; i++){
+        codeArr.push(parseInt(str.charCodeAt(i))+13)
+    }
+    return String.fromCharCode.apply(null,codeArr)
+}
+console.log(caesarsCipher('SERR PBQR PNZC'))
+*/
